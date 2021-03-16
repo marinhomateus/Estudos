@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<style>
+    table, th, td {border: 1px solid #000;}/*define a borda e a cor*/
+    th, td {padding:7px;}/*define o espaçamento*/
+    .Nome {background-color: grey;}
+    .Email {background-color: blue;}
+    .Telefone {background-color:yellow;}
+    .Cargos {background-color:orange;}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELAS</title>
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <table><!--Tag de tabela-->
+        <caption>Cadastros</caption>
+
+        <colgroup><!--Define os grupos da tabela, podendo ser separados entre linhas e colunas-->
+            <col class="Nome">
+            <col class="Email">
+            <col class="Telefone">
+            <col class="Cargos">
+        </colgroup>
+
+        <thead><!--Define Cabeçalho da Tabela-->
+        <tr><!--Tag de linha-->
+            <th>Nome</th><!--Tag de titulo de coluna-->
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Cargos</th>
+        </tr>
+        </thead>
+        
+        <tbody><!--Define Corpo da tabela-->
+        <tr>
+            <td>Pedro</td><!--Tag de dados de coluna-->
+            <td>pedrocnas@gmail.com</td>
+            <td>(11)55555-5555</td>
+            <td rowspan="4">Peão</td> <!--o atributo rowspan define o numero de linhas que a celula ocupará-->
+        </tr>
+        <tr>
+            <td>Henrique</td>
+            <td>henrmartso@gmail.com</td>
+            <td>(11)45555-5555</td>
+        </tr>
+        <tr>
+            <td>Rodney</td>
+            <td>rodneyupb8@gmail.com</td>
+            <td>(11)35555-5555</td>
+        </tr>
+        <tr>
+            <td>Mateus</td>
+            <td>mmarinho@gmail.com</td>
+            <td>(11)25555-5555</td>
+        </tr>
+        </tbody>
+
+        <tfoot><!--Define Rodapé da tabela-->
+        <tr>
+            <td colspan="4">Total: 4</td> <!--o atributo colspan define o numero de colunas que a celula ocupará-->
+        </tr>
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <fieldset><!--Agrupamento de infos com uma legenda-->
+        <legend>Informacoes Pessoais</legend>
+        
+        <form action="cadastro.php" method="post" >
+            <!--tag, action: pagina que recebe as informações, o metodo POST envia as informações encapsuladas sem que o cliente tenha acesso, o metodo GET envia os dados via URL tambem-->
+
+        Nome: <br>
+        <input type="text" name="nome" autofocus maxlength="8" autocomplete="off"><br>
+        <!--login, AUTOFOCUS torna o campo focado ao abrir a pagina, MAXLENGTH limita o tamanho-->
+        
+        Senha: <br>
+        <input type="password" name="senha" required><br>
+        <!--senha, REQUIRED torna o campo obrigatorio para envio-->
+        
+        Email: <br>
+        <input type="email" name="email" disabled placeholder="seu@email.com"><br>
+        <!-- DISABLED torna o campo inativo-->
+
+        Genero: <br>
+        <input type="radio" name="genero" value="masculino"> Masculino <br>
+        <input type="radio" name="genero" value="feminino"> Feminino <br>
+        <!-- RADIO: caixa de selecao exclusiva-->
+
+        Bens: <br>
+        <input type="checkbox" name="Carro" checked> Carro <br>
+        <input type="checkbox" name="Moto" checked> Moto <br>
+        <input type="checkbox" name="Casa" checked> Casa <br><br>
+        <!-- CHECKBOX: caixa de selecao-->
+
+        Pneus: <br>
+        <select name="Pneus">
+            <optgroup label="Motos">
+                <option value="Technic">Technic</option>
+                <option value="Continental">Continental</option>
+            </optgroup>
+            <optgroup label="Carros">
+                <option value="Goodyear">Goodyear</option>
+                <option value="Pirelli">Pirelli</option>
+            </optgroup>
+        </select> <br><br>
+
+        Quantidade: <br>
+        <input type="number" name="quantidade" min="1" max="5"><br>
+        <!-- Number: numero editavel-->
+        
+        Dinheiro: <br>
+        <input type="range" name="dinheiro" min="0" max="10000" step="1000"><br>
+        <!-- RANGE: cria um slider de valor, STEP limita o passo a passo a ser escolhido-->
+
+        Cor: <br>
+        <input type="color" name="cor"><br><br>
+        <!-- COLOR: caixa de selecao de cores-->
+
+        Imagem: <br>
+        <input type="file" name="imagem"><br><br>
+        <!-- FILE: upar arquivo-->
+
+        Botao: <br>
+        <button type="button">Clique</button>
+        
+        <input type="hidden" name="id"><br><br>
+        <!-- HIDDEN: upar valores ocultos-->
+        
+        URL: <br>
+        <input type="url" name="site"><br><br>
+        <!-- URL-->
+        
+        Pesquisa: <br>
+        <input type="search" name="Pesquisa"><br><br>
+        
+        Telefone: <br>
+        <input type="tel" name="telefone" maxlength="11" placeholder="(00)00000-0000" ><br><br>
+        
+        Data: <br>
+        <input type="date" name="data" min="2000-12-31" max="2020-12-31"><br><br>
+        <!--Data, com limites, ano-mes-dia-->
+        
+        <br><br>
+        <input type="submit" name="enviar" value="Enviar"><!--Botao de envio-->
+        
+
+    </form>
+</fieldset>
+    
+</body>
+</html>
