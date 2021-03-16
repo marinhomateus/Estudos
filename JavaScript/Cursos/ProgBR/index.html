@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function changeTitle(input){
+            let text = document.getElementById("p2")
+            text.innerText = input.value;
+        }
+
+        function onOver(button){
+            button.style.backgroundColor = "#ffff88"
+        }
+
+        function onOut(button){
+            button.style.backgroundColor = "lightblue"
+        }
+
+        function aleatory(){
+            let n = Math.round(Math.random()*10);
+            let text = document.getElementById("p2");
+            console.log(n);
+            text.innerText = n
+        }
+
+    </script>
+</head>
+<body>
+    <h1 onclick="console.log('clicado')">Clique aqui</h1>
+
+    <p class="paragraph">Text 1</p>
+    <p class="paragraph" id="p1">Text 2</p>
+    <p class="paragraph">Text 3</p>
+
+    <h2 id="p2">TEXTO</h2>
+    <input id="texto" type="text"><br>
+
+    <input onmouseover="onOver(this)" onmouseout="onOut(this)" type="button" onclick="changeTitle(texto)" value="Change">
+
+    <input type="button" onclick="aleatory()" value="Random">
+
+    
+
+</body>
+</html>
