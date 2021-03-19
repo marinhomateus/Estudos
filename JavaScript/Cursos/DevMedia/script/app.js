@@ -547,3 +547,5 @@ if( media >= 6 ){
 }
  */
 
+var nome = null;
+console.log(nome.length);
