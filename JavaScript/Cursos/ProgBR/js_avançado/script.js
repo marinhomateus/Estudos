@@ -62,3 +62,15 @@ function menosQue20 (aluno){
 //let alunosComMenosde20 = alunos.filter(menosQue20)
 
 console.log(alunos.filter(menosQue20));
+
+/*-------------------------------*/
+// MAP
+
+function alunoDaqui5Anos(aluno){
+    return { 
+        nome: aluno.nome, 
+        idade: aluno.idade +5
+    }
+}
+
+console.log(alunos.map(alunoDaqui5Anos));
