@@ -74,3 +74,27 @@ function alunoDaqui5Anos(aluno){
 }
 
 console.log(alunos.map(alunoDaqui5Anos));
+
+/*-------------------------------*/
+// Valor e Referencia
+
+let turmaA = ["Ana","Joao","Paula"];
+
+turmaB = [...turmaA]
+turmaB.push("William");
+
+turmaC = turmaA.slice();
+turmaC.pop();
+
+console.log(turmaA, turmaB, turmaC);
+
+
+let aluno1 = {nome: "Mateus", idade: 21};
+
+aluno2 = Object.assign({}, aluno1)
+aluno2.idade = 22;
+
+aluno3 = {...aluno1}
+aluno3.nome = "Amanda"
+
+console.log(aluno1,aluno2,aluno3);
